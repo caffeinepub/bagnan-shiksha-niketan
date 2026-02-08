@@ -1,58 +1,56 @@
 {
   "kind": "build_request",
-  "title": "Add one more animated mascot character",
+  "title": "Replace Home page hero single image with an animated hero asset",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-22",
-      "text": "Add one additional moving cartoon-style mascot element (original, non-copyrighted) with a lightweight animation to make the site feel more fun, and render it on the Mathematics page without interfering with content interaction (decorative only).",
+      "id": "REQ-24",
+      "text": "Replace the static Home page hero image (`/assets/sioj.png`) with an animated hero asset on the Home page hero section, so the homepage shows an animation instead of a single picture.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "recent-messages"
         ],
         "quotes": [
-          "add one more character animation to make it even more fun."
+          "please insert animation instead of single picture in the homepage"
         ]
       },
       "acceptanceCriteria": [
-        "A new mascot image is displayed on the Mathematics page (frontend/src/pages/MathematicsPage.tsx) as a decorative, animated element.",
-        "The mascot does not block clicks/taps on page content (uses pointer-events-none) and is marked decorative for assistive tech (empty alt and/or aria-hidden=true).",
-        "The animation is lightweight and consistent with existing motion styles (e.g., float/bounce-gentle/wiggle) and is disabled when the user prefers reduced motion (e.g., via motion-reduce:animate-none).",
-        "The mascot is responsive and does not overlap important UI on common breakpoints (hidden on small screens or positioned safely)."
+        "Home page hero no longer renders the static image at `src=\"/assets/sioj.png\"`.",
+        "Home page hero renders a looping animated asset (served as a local static file from `frontend/public/assets/generated`).",
+        "Animation is lightweight (loads quickly) and does not break layout on mobile or desktop.",
+        "Animated hero respects reduced-motion preferences (if the user has `prefers-reduced-motion: reduce`, show a non-animated fallback)."
       ]
     },
     {
-      "id": "REQ-23",
-      "text": "Add the new mascot image as a local static asset under frontend/public/assets/generated and reference it from the new mascot element using the same asset conventions as existing mascots.",
+      "id": "REQ-25",
+      "text": "Add the new animated hero asset to the project as a local static file under `frontend/public/assets/generated` and update the Home page to reference it.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-4"
+          "recent-messages"
         ],
         "quotes": [
-          "add one more character animation to make it even more fun."
+          "please insert animation instead of single picture in the homepage"
         ]
       },
       "acceptanceCriteria": [
-        "The new mascot image file exists in frontend/public/assets/generated with the exact filename specified in this build request.",
-        "The new mascot is loaded via a static /assets/generated/... path (no backend/image proxy).",
-        "No existing mascot assets (e.g., mascot-robotcat.dim_768x768.png, mascot-girl.dim_768x768.png) are removed or broken."
+        "A new animated hero file exists under `frontend/public/assets/generated` using the filename specified in this build request’s image requirements.",
+        "`frontend/src/pages/HomePage.tsx` references the new generated animated asset path (not a remote URL)."
       ]
     }
   ],
   "constraints": [
-    "Do not edit files under frontend/src/components/ui (read-only).",
-    "Do not introduce copyrighted characters (e.g., Dora, Doraemon); use an original mascot design.",
-    "Keep the backend architecture unchanged (single Motoko actor); no backend changes are required for this request."
+    "Frontend immutable paths must not be edited: `frontend/src/hooks/useInternetIdentity.ts`, `frontend/src/hooks/useInternetIdentity.tsx`, `frontend/src/hooks/useActor.ts`, `frontend/src/main.tsx`, and anything under `frontend/src/components/ui`.",
+    "Do not add any new backend functionality for this change (hero animation must be served as a static frontend asset)."
   ],
   "nonGoals": [
-    "Do not redesign site navigation or add new learning modules.",
-    "Do not change the existing gender theme behavior beyond what is necessary to ensure the new mascot respects the current styling and reduced-motion preferences."
+    "Adding sound effects or audio to the homepage animation.",
+    "Changing homepage copy or navigation beyond what is required to swap the hero media."
   ],
   "imageRequirements": {
     "required": [
-      "Original cartoon mascot character illustration (mascot-rocketfox.dim_768x768.png)"
+      "Looping kid-friendly hero animation illustration, bright and playful, wide landscape composition (home-hero-animated.dim_1400x900.gif)"
     ],
     "edits": []
   },

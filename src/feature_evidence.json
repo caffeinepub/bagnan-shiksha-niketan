@@ -2,10 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-add-one-additional-moving-cartoon-style-mascot-element-original-non-copyrighted-with-a-lightweight-animation-to-make-the-site-feel-more-fun-and-render-it-on-the-mathematics-page-without-interfering-with-content-interaction-decorative-only",
-      "featureTitle": "Add one additional moving cartoon-style mascot element (original, non-copyrighted) with a lightweight animation to make the site feel more fun, and render it on the Mathematics page without interfering with content interaction (decorative only).",
+      "featureId": "feature-replace-the-static-home-page-hero-image-assets-sioj-png-with-an-animated-hero-asset-on-the-home-page-hero-section-so-the-homepage-shows-an-animation-instead-of-a-single-picture",
+      "featureTitle": "Replace the static Home page hero image (`/assets/sioj.png`) with an animated hero asset on the Home page hero section, so the homepage shows an animation instead of a single picture.",
       "files": [
-        "frontend/src/pages/MathematicsPage.tsx"
+        "frontend/src/pages/HomePage.tsx"
       ],
       "components": [
         "authorization@4.0.0",
@@ -16,15 +16,15 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-22"
+        "REQ-24"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-add-the-new-mascot-image-as-a-local-static-asset-under-frontend-public-assets-generated-and-reference-it-from-the-new-mascot-element-using-the-same-asset-conventions-as-existing-mascots",
-      "featureTitle": "Add the new mascot image as a local static asset under frontend/public/assets/generated and reference it from the new mascot element using the same asset conventions as existing mascots.",
+      "featureId": "feature-add-the-new-animated-hero-asset-to-the-project-as-a-local-static-file-under-frontend-public-assets-generated-and-update-the-home-page-to-reference-it",
+      "featureTitle": "Add the new animated hero asset to the project as a local static file under `frontend/public/assets/generated` and update the Home page to reference it.",
       "files": [
-        "frontend/src/pages/MathematicsPage.tsx"
+        "frontend/src/pages/HomePage.tsx"
       ],
       "components": [
         "authorization@4.0.0",
@@ -35,7 +35,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-23"
+        "REQ-25"
       ],
       "confidence": "high"
     }

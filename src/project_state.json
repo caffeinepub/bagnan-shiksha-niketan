@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 9,
+  "projectStateVersion": 11,
   "summary": "Expand the kid-friendly educational website to include richer learning content (more rhymes and math question banks), early-learning alphabet/number tracing & handwriting practice, additional animations, and an optional gender-based visual theme (girl/boy color styling) with engaging moving cartoon-style characters to improve kids’ appeal.",
   "architectural_notes": [
     "If adding cartoon characters/mascots, use original or properly licensed assets (avoid copyrighted characters like Doraemon/Dora unless licensed)."
@@ -11,7 +11,7 @@
     "Requested: animate the specified image/mascot element (current animation not present or not working as expected)."
   ],
   "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Original cartoon mascot character illustration (mascot-rocketfox.dim_768x768.png)",
+  "imageRequirements": "## Required Images\n- Looping kid-friendly hero animation illustration, bright and playful, wide landscape composition (home-hero-animated.dim_1400x900.gif)",
   "existing_features": [
     {
       "id": "feature-create-a-cohesive-fun-kid-friendly-visual-theme-for-the-entire-website-colors-typography-spacing-illustration-style-animation-style-that-feels-top-notch-and-appeals-to-parents-and-young-children-apply-it-consistently-across-all-pages-and-components",
@@ -188,6 +188,22 @@
         "REQ-23"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-replace-the-static-home-page-hero-image-assets-sioj-png-with-an-animated-hero-asset-on-the-home-page-hero-section-so-the-homepage-shows-an-animation-instead-of-a-single-picture",
+      "title": "Replace the static Home page hero image (`/assets/sioj.png`) with an animated hero asset on the Home page hero section, so the homepage shows an animation instead of a single picture.",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-new-animated-hero-asset-to-the-project-as-a-local-static-file-under-frontend-public-assets-generated-and-update-the-home-page-to-reference-it",
+      "title": "Add the new animated hero asset to the project as a local static file under `frontend/public/assets/generated` and update the Home page to reference it.",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -286,6 +302,12 @@
     {
       "id": "AR-25",
       "summary": "Add one additional moving cartoon-style character animation/mascot element to increase kid engagement",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-26",
+      "summary": "Replace the single static Home page picture/hero with an animated version (use animation instead of a single image on the homepage)",
       "reqIds": [],
       "status": "pending"
     }

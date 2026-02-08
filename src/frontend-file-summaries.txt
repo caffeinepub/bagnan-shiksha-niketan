@@ -11,7 +11,7 @@
   "frontend/src/components/site/AnimatedSection.tsx": "Reusable wrapper component with IntersectionObserver-triggered entrance animations and prefers-reduced-motion support for accessibility.",
   "frontend/src/components/site/SubjectIcon.tsx": "Component displaying subject icons from the sprite sheet using CSS positioning and transforms.",
   "frontend/src/components/learning/ClassSelector.tsx": "Dropdown selector for choosing class level (Nursery–Class 3) using shadcn Select component, connected to ClassSelectionContext.",
-  "frontend/src/pages/HomePage.tsx": "Homepage with hero section featuring the new sioj.png image with float animation, expanded feature cards including Alphabet & Numbers module, animated mascot decoration (robot-cat only), and about/CTA sections.",
+  "frontend/src/pages/HomePage.tsx": "Homepage with hero section featuring an animated GIF hero asset (with reduced-motion fallback to static image), expanded feature cards including Alphabet & Numbers module, animated mascot decoration (robot-cat only), and about/CTA sections.",
   "frontend/src/pages/LearnPage.tsx": "Learning hub page with class selector, expanded module grid including Alphabet & Numbers card, and animated mascot decoration (girl character).",
   "frontend/src/content/rhymes.ts": "Expanded static data array of 12 nursery rhymes with titles, descriptions, and lyrics including new entries like Old MacDonald, Wheels on the Bus, and ABC Song.",
   "frontend/src/components/rhymes/RhymeCard.tsx": "Card component displaying a single rhyme with play button to open the player modal.",

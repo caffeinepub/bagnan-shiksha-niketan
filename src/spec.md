@@ -1,11 +1,10 @@
 # Specification
 
 ## Summary
-**Goal:** Add one additional animated, original cartoon-style mascot on the Mathematics page to make the site feel more fun without affecting usability.
+**Goal:** Replace the Home page hero’s static image with a lightweight looping animation served as a local static asset, with a reduced-motion fallback.
 
 **Planned changes:**
-- Add a new mascot image asset under `frontend/public/assets/generated` named `mascot-rocketfox.dim_768x768.png`.
-- Update `frontend/src/pages/MathematicsPage.tsx` to render the new mascot as a decorative element with a lightweight animation that respects reduced-motion preferences.
-- Ensure the mascot is non-interactive (`pointer-events-none`), marked decorative for assistive tech, and positioned responsively so it won’t overlap important UI (hidden or placed safely on small screens).
+- Add a new looping animated hero file under `frontend/public/assets/generated` and use it in the Home page hero section instead of `/assets/sioj.png`.
+- Update `frontend/src/pages/HomePage.tsx` to render the animated asset and respect `prefers-reduced-motion` by showing a non-animated fallback.
 
-**User-visible outcome:** The Mathematics page shows an extra fun animated mascot that decorates the page without blocking any interactions.
+**User-visible outcome:** The Home page hero displays a looping animation (and shows a static fallback for users who prefer reduced motion) instead of the single static image.

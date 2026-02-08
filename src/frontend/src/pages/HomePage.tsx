@@ -72,11 +72,17 @@ export default function HomePage() {
 
             <AnimatedSection animation="slide-left" delay={200}>
               <div className="relative">
-                <img
-                  src="/assets/sioj.png"
-                  alt="Happy kids learning"
-                  className="w-full h-auto rounded-3xl shadow-playful-lg animate-float"
-                />
+                <picture>
+                  <source
+                    srcSet="/assets/sioj.png"
+                    media="(prefers-reduced-motion: reduce)"
+                  />
+                  <img
+                    src="/assets/generated/home-hero-animated.dim_1400x900.gif"
+                    alt="Happy kids learning"
+                    className="w-full h-auto rounded-3xl shadow-playful-lg"
+                  />
+                </picture>
               </div>
             </AnimatedSection>
           </div>

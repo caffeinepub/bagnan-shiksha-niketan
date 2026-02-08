@@ -1,43 +1,42 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Add an additional animated mascot to the Mathematics page",
+  "title": "Swap Home hero static image for generated looping animated hero (with reduced-motion fallback)",
   "requirements": [
     {
-      "id": "REQ-22",
-      "summary": "Render a new decorative, lightweight-animated mascot on the Mathematics page without interfering with content interaction, respecting reduced-motion and responsive breakpoints.",
+      "id": "REQ-24",
+      "summary": "Update the Home page hero section to render a local looping animated hero asset instead of the static /assets/sioj.png image, with a reduced-motion fallback and responsive layout stability.",
       "acceptanceCriteria": [
-        "A new mascot image is displayed on the Mathematics page (frontend/src/pages/MathematicsPage.tsx) as a decorative, animated element.",
-        "The mascot does not block clicks/taps on page content (uses pointer-events-none) and is marked decorative for assistive tech (empty alt and/or aria-hidden=true).",
-        "The animation is lightweight and consistent with existing motion styles (e.g., float/bounce-gentle/wiggle) and is disabled when the user prefers reduced motion (e.g., via motion-reduce:animate-none).",
-        "The mascot is responsive and does not overlap important UI on common breakpoints (hidden on small screens or positioned safely)."
+        "Home page hero no longer renders the static image at `src=\"/assets/sioj.png\"`.",
+        "Home page hero renders a looping animated asset (served as a local static file from `frontend/public/assets/generated`).",
+        "Animation is lightweight (loads quickly) and does not break layout on mobile or desktop.",
+        "Animated hero respects reduced-motion preferences (if the user has `prefers-reduced-motion: reduce`, show a non-animated fallback)."
       ],
       "file_operations": [
         {
-          "path": "frontend/src/pages/MathematicsPage.tsx",
+          "path": "frontend/src/pages/HomePage.tsx",
           "operation": "modify",
-          "description": "Add a new decorative <img> mascot element that references the local static asset (mascot-rocketfox.dim_768x768.png), positioned safely (absolute within a relative page wrapper), non-interactive (pointer-events-none), decorative for assistive tech (alt=\"\" and aria-hidden), uses an existing lightweight animation class (e.g., animate-float or animate-bounce-gentle) with motion-reduce:animate-none, and is hidden on smaller screens (e.g., hidden lg:block) to avoid overlapping important UI."
+          "description": "Replace the hero <img> currently using `/assets/sioj.png` with a hero media block that uses the local animated asset at `frontend/public/assets/generated/home-hero-animated.dim_1400x900.gif` for the default case, and a non-animated local fallback for `prefers-reduced-motion: reduce` (e.g., use a <picture> media source switching to the existing static illustration). Ensure the hero media preserves the current rounded/shadow styling and maintains a stable responsive aspect ratio to avoid layout shifts."
         }
       ]
     },
     {
-      "id": "REQ-23",
-      "summary": "Add the new mascot as a local static asset under frontend/public/assets/generated and reference it using existing mascot asset conventions.",
+      "id": "REQ-25",
+      "summary": "Add the required generated animated hero file under frontend/public/assets/generated and reference it from HomePage.tsx as a local static asset.",
       "acceptanceCriteria": [
-        "The new mascot image file exists in frontend/public/assets/generated with the exact filename specified in this build request.",
-        "The new mascot is loaded via a static /assets/generated/... path (no backend/image proxy).",
-        "No existing mascot assets (e.g., mascot-robotcat.dim_768x768.png, mascot-girl.dim_768x768.png) are removed or broken."
+        "A new animated hero file exists under `frontend/public/assets/generated` using the filename specified in this build request’s image requirements.",
+        "`frontend/src/pages/HomePage.tsx` references the new generated animated asset path (not a remote URL)."
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/generated/mascot-rocketfox.dim_768x768.png",
+          "path": "frontend/public/assets/generated/home-hero-animated.dim_1400x900.gif",
           "operation": "create",
-          "description": "Add the generated original, non-copyrighted cartoon mascot illustration file exactly named frontend/public/assets/generated/mascot-rocketfox.dim_768x768.png for static serving and use in the Mathematics page."
+          "description": "Add the generated looping hero animation asset file exactly as specified: `frontend/public/assets/generated/home-hero-animated.dim_1400x900.gif`."
         },
         {
-          "path": "frontend/src/pages/MathematicsPage.tsx",
+          "path": "frontend/src/pages/HomePage.tsx",
           "operation": "modify",
-          "description": "Ensure the new mascot element loads the image via the static path /assets/generated/mascot-rocketfox.dim_768x768.png and follows the same asset conventions used by existing mascots (no changes to other mascot references)."
+          "description": "Update the hero media reference to use the local static asset path for the new animation (served from `frontend/public/assets/generated/home-hero-animated.dim_1400x900.gif`) and ensure no remote URLs are introduced."
         }
       ]
     }
