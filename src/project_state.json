@@ -1,0 +1,274 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 7,
+  "summary": "Expand the kid-friendly educational website to include richer learning content (more rhymes and math question banks), early-learning alphabet/number tracing & handwriting practice, additional animations, and an optional gender-based visual theme (girl/boy color styling) with engaging moving cartoon-style characters to improve kids’ appeal.",
+  "architectural_notes": [
+    "If adding cartoon characters/mascots, use original or properly licensed assets (avoid copyrighted characters like Doraemon/Dora unless licensed)."
+  ],
+  "known_issues": [
+    "Gender theme selection (Baby Girl/Baby Boy) is not applying color changes on the website.",
+    "An extra/duplicate image is appearing layered on top of the intended image (needs removal).",
+    "Requested: animate the specified image/mascot element (current animation not present or not working as expected)."
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-create-a-cohesive-fun-kid-friendly-visual-theme-for-the-entire-website-colors-typography-spacing-illustration-style-animation-style-that-feels-top-notch-and-appeals-to-parents-and-young-children-apply-it-consistently-across-all-pages-and-components",
+      "title": "Create a cohesive, fun, kid-friendly visual theme for the entire website (colors, typography, spacing, illustration style, animation style) that feels “top notch” and appeals to parents and young children; apply it consistently across all pages and components.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-multi-page-marketing-learning-site-for-bagnan-shiksha-niketan-under-the-domain-bagnanshikshaniketan-com-with-clear-navigation-to-home-learn-nursery-class-3-rhymes-mathematics-general-knowledge-social-studies-admissions-contact",
+      "title": "Implement a multi-page marketing + learning site for “Bagnan Shiksha Niketan” under the domain bagnanshikshaniketan.com with clear navigation to: Home, Learn (Nursery–Class 3), Rhymes, Mathematics, General Knowledge, Social Studies, Admissions, Contact.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-class-standard-selector-for-online-learning-that-supports-nursery-lkg-ukg-if-desired-and-classes-1-3-selected-class-must-filter-and-display-the-appropriate-learning-content-and-questions-across-modules",
+      "title": "Add a “Class/Standard selector” for online learning that supports Nursery, LKG/UKG (if desired), and Classes 1–3; selected class must filter and display the appropriate learning content and questions across modules.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-rhymes-learning-section-that-presents-age-appropriate-rhymes-with-both-audio-and-video-playback-include-an-initial-set-of-sample-rhymes-as-static-content-and-structure-the-data-so-more-rhymes-can-be-added-easily-later",
+      "title": "Build a Rhymes learning section that presents age-appropriate rhymes with both audio and video playback; include an initial set of sample rhymes as static content and structure the data so more rhymes can be added easily later.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-mathematics-module-for-nursery-class-3-that-includes-tables-addition-subtraction-multiplication-division-with-content-and-or-practice-sets-appropriate-to-the-selected-class",
+      "title": "Build a Mathematics module for Nursery–Class 3 that includes: tables, addition, subtraction, multiplication, division, with content and/or practice sets appropriate to the selected class.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-general-knowledge-gk-questions-module-filtered-by-selected-class-include-a-starter-bank-of-sample-questions-and-answers-per-class-level",
+      "title": "Build a General Knowledge (GK) questions module filtered by selected class; include a starter bank of sample questions and answers per class level.",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-build-a-social-studies-module-filtered-by-selected-class-include-a-starter-set-of-topics-and-or-questions-per-class-level-nursery-class-3",
+      "title": "Build a Social Studies module filtered by selected class; include a starter set of topics and/or questions per class level (Nursery–Class 3).",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-contact-us-page-that-displays-location-email-phone-and-social-links-facebook-twitter-with-a-polished-parent-friendly-layout",
+      "title": "Create a Contact Us page that displays location, email, phone, and social links (Facebook, Twitter) with a polished, parent-friendly layout.",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-animated-parent-focused-admission-form-for-enquiries-registration-and-persist-submissions-on-the-backend-collect-at-minimum-parent-guardian-name-child-name-child-class-standard-phone-email-optional-address-optional-message-notes",
+      "title": "Implement an animated, parent-focused Admission Form for enquiries/registration and persist submissions on the backend; collect at minimum: parent/guardian name, child name, child class/standard, phone, email (optional), address (optional), message/notes.",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-required-generated-static-images-and-integrate-them-into-the-frontend-as-local-assets-served-from-frontend-public-assets-generated-including-a-site-logo-mascot-and-a-hero-illustration-to-support-the-animated-kid-friendly-feel",
+      "title": "Add required generated static images and integrate them into the frontend as local assets (served from frontend/public/assets/generated), including a site logo/mascot and a hero illustration to support the animated kid-friendly feel.",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-expand-the-rhymes-content-library-by-adding-a-larger-set-of-additional-age-appropriate-rhymes-to-the-existing-static-rhymes-dataset-keeping-the-same-data-structure-id-title-description-optional-thumbnail-audiosrc-videosrc-lyrics-so-new-items-remain-easy-to-add-later",
+      "title": "Expand the Rhymes content library by adding a larger set of additional age-appropriate rhymes to the existing static rhymes dataset, keeping the same data structure (id/title/description/optional thumbnail/audioSrc/videoSrc/lyrics) so new items remain easy to add later.",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-expand-the-mathematics-practice-banks-by-adding-more-problems-across-the-existing-class-levels-nursery-lkg-ukg-class-1-3-and-across-the-existing-section-types-e-g-counting-shapes-addition-subtraction-tables-multiplication-division-keeping-the-current-data-model-and-ensuring-the-ui-remains-responsive",
+      "title": "Expand the Mathematics practice banks by adding more problems across the existing class levels (Nursery, LKG, UKG, Class 1–3) and across the existing section types (e.g., counting/shapes/addition/subtraction/tables/multiplication/division), keeping the current data model and ensuring the UI remains responsive.",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-new-learning-module-for-alphabet-numbers-that-teaches-letter-and-number-recognition-and-provides-basic-handwriting-tracing-practice-draw-write-for-alphabets-a-z-and-numbers-at-minimum-0-9",
+      "title": "Add a new learning module for Alphabet & Numbers that teaches letter and number recognition and provides basic handwriting/tracing practice (draw/write) for alphabets (A–Z) and numbers (at minimum 0–9).",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-integrate-the-new-alphabet-numbers-module-into-site-navigation-where-appropriate-add-it-to-the-learn-page-modules-list-and-the-home-page-explore-our-learning-modules-section-so-parents-kids-can-discover-it-easily",
+      "title": "Integrate the new Alphabet & Numbers module into site navigation where appropriate: add it to the Learn page modules list and the Home page “Explore Our Learning Modules” section so parents/kids can discover it easily.",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-a-gender-selection-option-baby-girl-baby-boy-that-controls-the-site-s-visual-theme-colors-girly-palette-vs-boy-palette-and-persists-the-selection-for-the-session-or-longer-so-the-theme-stays-consistent-across-page-navigation-and-refresh",
+      "title": "Add a gender selection option (Baby Girl / Baby Boy) that controls the site’s visual theme colors (girly palette vs boy palette) and persists the selection for the session (or longer) so the theme stays consistent across page navigation and refresh.",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-more-kid-engaging-animations-across-key-pages-home-learn-rhymes-mathematics-and-the-new-alphabet-numbers-page-using-lightweight-motion-patterns-already-in-use-scroll-in-animations-gentle-floating-bouncing-wiggle-without-harming-readability-or-performance",
+      "title": "Add more kid-engaging animations across key pages (Home, Learn, Rhymes, Mathematics, and the new Alphabet & Numbers page) using lightweight motion patterns already in use (scroll-in animations, gentle floating/bouncing/wiggle), without harming readability or performance.",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-moving-cartoon-style-character-mascot-elements-to-the-ui-to-make-the-site-more-attractive-for-kids-using-original-non-copyrighted-characters-do-not-copy-or-directly-use-dora-the-explorer-doraemon-or-other-protected-characters-characters-should-appear-as-animated-visual-elements-e-g-floating-waving-on-home-and-learn-pages-at-minimum",
+      "title": "Add moving cartoon-style character/mascot elements to the UI to make the site more attractive for kids, using original, non-copyrighted characters (do not copy or directly use Dora the Explorer, Doraemon, or other protected characters). Characters should appear as animated visual elements (e.g., floating/waving) on Home and Learn pages at minimum.",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-fix-the-baby-girl-baby-boy-theme-so-selecting-a-gender-actually-changes-the-site-colors-across-pages-background-text-cards-buttons-gradients-and-persists-after-refresh-navigation",
+      "title": "Fix the Baby Girl/Baby Boy theme so selecting a gender actually changes the site colors across pages (background, text, cards, buttons, gradients) and persists after refresh/navigation.",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-integrate-the-uploaded-image-sioj-png-as-the-home-page-hero-illustration-replacing-the-current-hero-illustration-image-and-apply-a-lightweight-animation-to-it",
+      "title": "Integrate the uploaded image `sioj.png` as the Home page hero illustration (replacing the current hero illustration image) and apply a lightweight animation to it.",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-the-extra-image-that-appears-layered-on-top-of-the-main-image-in-the-ui-the-overlay-duplicate-image-above-the-hero-image",
+      "title": "Remove the extra image that appears layered on top of the main image in the UI (the overlay/duplicate image above the hero image).",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create animated, top-notch kid-friendly website for Bagnan Shiksha Niketan (bagnanshikshaniketan.com) to showcase local kids coaching",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Provide class/standard selection (Nursery–Class 3 for online learning) that filters and shows content by chosen class",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Add Rhymes learning section with audio and video content",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Add Mathematics practice content: tables, addition, subtraction, multiplication, division (by class)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add General Knowledge questions module (by class)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Add Social Studies questions/content module (by class)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Add Contact Us page with location, email, phone, and social links (Facebook, Twitter)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Add online Admission Form for parent enquiries/registration",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Implement backend (Motoko, single-actor) data structures and APIs to support admission submissions persistence, including: createSubmission and listSubmissions; include timestamps and stable storage so data survives canister upgrades.",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Expand Rhymes content library with more rhymes (audio/video) and easy way to add more items",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Expand Mathematics question/practice banks with more questions by class level",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Add Alphabet & Numbers learning module including letter/number recognition plus tracing/handwriting practice (draw/write alphabets and numbers)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "Add more site-wide animations and interactive motion elements to increase kid engagement",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Add gender option that changes the site’s visual theme (girly colors/design for baby girl; boy-type colors/design for baby boy)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-24",
+      "summary": "Add moving cartoon-style character animations/mascots on the site to make it more attractive for kids",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Bagnan Shiksha Niketan",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

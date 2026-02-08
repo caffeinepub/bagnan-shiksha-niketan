@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Neutral/Default Theme */
+    --background: 42 80% 98%;
+    --foreground: 42 10% 20%;
+    --card: 0 0% 100%;
+    --card-foreground: 42 10% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 42 10% 20%;
+    --primary: 35 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 150 60% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 85 65% 65%;
+    --accent-foreground: 42 10% 20%;
+    --warning: 60 60% 70%;
+    --warning-foreground: 42 10% 20%;
+    --success: 145 60% 60%;
+    --success-foreground: 0 0% 100%;
+    --muted: 42 20% 95%;
+    --muted-foreground: 42 10% 45%;
+    --destructive: 25 75% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 42 20% 90%;
+    --input: 42 20% 90%;
+    --ring: 35 70% 55%;
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 42 15% 15%;
+    --foreground: 42 10% 95%;
+    --card: 42 15% 18%;
+    --card-foreground: 42 10% 95%;
+    --popover: 42 15% 18%;
+    --popover-foreground: 42 10% 95%;
+    --primary: 35 70% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 150 60% 65%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 85 65% 70%;
+    --accent-foreground: 42 15% 15%;
+    --warning: 60 60% 75%;
+    --warning-foreground: 42 15% 15%;
+    --success: 145 60% 65%;
+    --success-foreground: 0 0% 100%;
+    --muted: 42 15% 25%;
+    --muted-foreground: 42 10% 65%;
+    --destructive: 25 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 42 15% 25%;
+    --input: 42 15% 25%;
+    --ring: 35 70% 60%;
+  }
+
+  /* Baby Girl Theme */
+  [data-gender='girl'] {
+    --background: 340 80% 98%;
+    --foreground: 340 30% 25%;
+    --card: 0 0% 100%;
+    --card-foreground: 340 30% 25%;
+    --primary: 340 75% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 320 70% 65%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 350 65% 70%;
+    --accent-foreground: 340 30% 25%;
+    --warning: 30 60% 70%;
+    --warning-foreground: 340 30% 25%;
+    --success: 145 60% 65%;
+    --success-foreground: 0 0% 100%;
+    --muted: 340 40% 96%;
+    --muted-foreground: 340 30% 50%;
+    --border: 340 30% 92%;
+    --input: 340 30% 92%;
+    --ring: 340 75% 60%;
+  }
+
+  [data-gender='girl'].dark {
+    --background: 340 25% 18%;
+    --foreground: 340 20% 95%;
+    --card: 340 25% 22%;
+    --card-foreground: 340 20% 95%;
+    --primary: 340 75% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 320 70% 70%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 350 65% 75%;
+    --accent-foreground: 340 25% 18%;
+    --muted: 340 25% 28%;
+    --muted-foreground: 340 20% 70%;
+    --border: 340 25% 28%;
+    --input: 340 25% 28%;
+    --ring: 340 75% 65%;
+  }
+
+  /* Baby Boy Theme */
+  [data-gender='boy'] {
+    --background: 230 80% 98%;
+    --foreground: 230 30% 25%;
+    --card: 0 0% 100%;
+    --card-foreground: 230 30% 25%;
+    --primary: 230 75% 55%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 70% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 250 65% 65%;
+    --accent-foreground: 230 30% 25%;
+    --warning: 60 60% 70%;
+    --warning-foreground: 230 30% 25%;
+    --success: 145 60% 60%;
+    --success-foreground: 0 0% 100%;
+    --muted: 230 40% 96%;
+    --muted-foreground: 230 30% 50%;
+    --border: 230 30% 92%;
+    --input: 230 30% 92%;
+    --ring: 230 75% 55%;
+  }
+
+  [data-gender='boy'].dark {
+    --background: 230 25% 18%;
+    --foreground: 230 20% 95%;
+    --card: 230 25% 22%;
+    --card-foreground: 230 20% 95%;
+    --primary: 230 75% 60%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 70% 65%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 250 65% 70%;
+    --accent-foreground: 230 25% 18%;
+    --muted: 230 25% 28%;
+    --muted-foreground: 230 20% 70%;
+    --border: 230 25% 28%;
+    --input: 230 25% 28%;
+    --ring: 230 75% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer utilities {
+  /* Custom Animations */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  @keyframes bounce-gentle {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes wiggle {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    25% {
+      transform: rotate(-3deg);
+    }
+    75% {
+      transform: rotate(3deg);
+    }
+  }
+
+  @keyframes scale-in {
+    0% {
+      transform: scale(0.9);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-bounce-gentle {
+    animation: bounce-gentle 2s ease-in-out infinite;
+  }
+
+  .animate-wiggle {
+    animation: wiggle 1s ease-in-out infinite;
+  }
+
+  .animate-wiggle-hover:hover {
+    animation: wiggle 0.5s ease-in-out;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.5s ease-out;
+  }
+
+  /* Reduced motion support */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-float,
+    .animate-bounce-gentle,
+    .animate-wiggle,
+    .animate-wiggle-hover:hover,
+    .animate-scale-in {
+      animation: none;
+    }
+  }
+}
