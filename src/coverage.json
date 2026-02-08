@@ -1,51 +1,37 @@
 {
   "kind": "coverage_report",
   "version": "1.0",
-  "generatedAt": "2026-02-08T20:11:36.993Z",
+  "generatedAt": "2026-02-08T20:16:28.553Z",
   "sources": {
     "buildRequest": true,
     "implementationPlan": true
   },
   "requirements": {
-    "total": 3,
-    "implemented": 3,
+    "total": 2,
+    "implemented": 2,
     "items": [
       {
-        "id": "REQ-19",
-        "summary": "Fix the Baby Girl/Baby Boy theme so selecting a gender actually changes the site colors across pages (background, text, cards, buttons, gradients) and persists after refresh/navigation.",
+        "id": "REQ-22",
+        "summary": "Add one additional moving cartoon-style mascot element (original, non-copyrighted) with a lightweight animation to make the site feel more fun, and render it on the Mathematics page without interfering with content interaction (decorative only).",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/src/index.css",
-          "frontend/src/theme/GenderThemeContext.tsx",
-          "frontend/src/components/site/GenderSelector.tsx"
+          "frontend/src/pages/MathematicsPage.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/index.css",
-          "frontend/src/theme/GenderThemeContext.tsx",
-          "frontend/src/components/site/GenderSelector.tsx"
+          "frontend/src/pages/MathematicsPage.tsx"
         ]
       },
       {
-        "id": "REQ-20",
-        "summary": "Integrate the uploaded image `sioj.png` as the Home page hero illustration (replacing the current hero illustration image) and apply a lightweight animation to it.",
+        "id": "REQ-23",
+        "summary": "Add the new mascot image as a local static asset under frontend/public/assets/generated and reference it from the new mascot element using the same asset conventions as existing mascots.",
         "status": "implemented",
         "plannedFiles": [
-          "frontend/public/assets/sioj.png",
-          "frontend/src/pages/HomePage.tsx"
+          "frontend/public/assets/generated/mascot-rocketfox.dim_768x768.png",
+          "frontend/src/pages/MathematicsPage.tsx"
         ],
         "matchedFiles": [
-          "frontend/src/pages/HomePage.tsx"
-        ]
-      },
-      {
-        "id": "REQ-21",
-        "summary": "Remove the extra image that appears layered on top of the main image in the UI (the overlay/duplicate image above the hero image).",
-        "status": "implemented",
-        "plannedFiles": [
-          "frontend/src/pages/HomePage.tsx"
-        ],
-        "matchedFiles": [
-          "frontend/src/pages/HomePage.tsx"
+          "frontend/public/assets/generated/mascot-rocketfox.dim_768x768.png",
+          "frontend/src/pages/MathematicsPage.tsx"
         ]
       }
     ]
@@ -55,11 +41,8 @@
     "feature_evidence.json",
     "frontend-file-summaries.txt",
     "frontend-implementation-plan.json",
-    "frontend/public/assets/generated/home-hero-illustration.dim_1600x900.png",
-    "frontend/src/components/site/GenderSelector.tsx",
-    "frontend/src/index.css",
-    "frontend/src/pages/HomePage.tsx",
-    "frontend/src/theme/GenderThemeContext.tsx",
+    "frontend/public/assets/generated/mascot-rocketfox.dim_768x768.png",
+    "frontend/src/pages/MathematicsPage.tsx",
     "project_state.json",
     "scratch/component-selection.json",
     "spec.md",

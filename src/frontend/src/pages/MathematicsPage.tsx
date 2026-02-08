@@ -10,7 +10,15 @@ export default function MathematicsPage() {
   const sections = MATH_CONTENT[selectedClass] || [];
 
   return (
-    <div className="py-12 md:py-16">
+    <div className="py-12 md:py-16 relative">
+      {/* Animated Mascot - Rocket Fox */}
+      <img
+        src="/assets/generated/mascot-rocketfox.dim_768x768.png"
+        alt=""
+        className="absolute top-12 right-8 w-24 h-24 md:w-32 md:h-32 animate-wiggle motion-reduce:animate-none pointer-events-none hidden lg:block"
+        aria-hidden="true"
+      />
+      
       <div className="container">
         <AnimatedSection>
           <div className="text-center space-y-4 mb-12">

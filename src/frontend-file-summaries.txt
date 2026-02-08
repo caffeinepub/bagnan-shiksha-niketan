@@ -20,7 +20,7 @@
   "frontend/src/content/math.ts": "Expanded class-filtered math content with additional problems across all class levels (Nursery-Class 3) in sections for counting, shapes, addition, subtraction, multiplication, division, and tables.",
   "frontend/src/components/math/MathSectionTabs.tsx": "Tabs component with horizontal scroll support for math sections, rendering practice cards in responsive grid for expanded problem sets.",
   "frontend/src/components/math/PracticeCard.tsx": "Interactive practice card with input field, check/reveal answer buttons, and visual feedback (correct/incorrect).",
-  "frontend/src/pages/MathematicsPage.tsx": "Mathematics page with animated heading, class selector, and tabbed sections displaying expanded math problem sets with floating animation on class display.",
+  "frontend/src/pages/MathematicsPage.tsx": "Mathematics page with animated heading, class selector, tabbed sections displaying math problem sets, and a decorative animated rocket fox mascot positioned in the top-right corner.",
   "frontend/src/content/gk.ts": "Class-filtered general knowledge questions and answers for Nursery–Class 3.",
   "frontend/src/components/qa/QuestionList.tsx": "Accordion component displaying questions with expandable answers using shadcn Accordion.",
   "frontend/src/pages/GeneralKnowledgePage.tsx": "GK page with class selector and accordion list of questions filtered by selected class.",

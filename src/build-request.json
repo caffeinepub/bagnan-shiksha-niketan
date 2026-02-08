@@ -1,74 +1,59 @@
 {
   "kind": "build_request",
-  "title": "Fix gender theme color switching and clean up/animate hero image",
+  "title": "Add one more animated mascot character",
   "priority": "normal",
   "requirements": [
     {
-      "id": "REQ-19",
-      "text": "Fix the Baby Girl/Baby Boy theme so selecting a gender actually changes the site colors across pages (background, text, cards, buttons, gradients) and persists after refresh/navigation.",
+      "id": "REQ-22",
+      "text": "Add one additional moving cartoon-style mascot element (original, non-copyrighted) with a lightweight animation to make the site feel more fun, and render it on the Mathematics page without interfering with content interaction (decorative only).",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-5"
+          "msg-4"
         ],
         "quotes": [
-          "website not changing color  upon selection baby girl or boy"
+          "add one more character animation to make it even more fun."
         ]
       },
       "acceptanceCriteria": [
-        "Clicking “Baby Girl” updates the overall site color palette immediately (e.g., background, primary/secondary/accent-based UI elements).",
-        "Clicking “Baby Boy” updates the overall site color palette immediately.",
-        "The selected theme persists on page refresh and when navigating between routes.",
-        "The theme implementation remains compatible with Tailwind’s `hsl(var(--...))` color bindings (i.e., CSS variable values are in a format Tailwind can resolve correctly)."
+        "A new mascot image is displayed on the Mathematics page (frontend/src/pages/MathematicsPage.tsx) as a decorative, animated element.",
+        "The mascot does not block clicks/taps on page content (uses pointer-events-none) and is marked decorative for assistive tech (empty alt and/or aria-hidden=true).",
+        "The animation is lightweight and consistent with existing motion styles (e.g., float/bounce-gentle/wiggle) and is disabled when the user prefers reduced motion (e.g., via motion-reduce:animate-none).",
+        "The mascot is responsive and does not overlap important UI on common breakpoints (hidden on small screens or positioned safely)."
       ]
     },
     {
-      "id": "REQ-20",
-      "text": "Integrate the uploaded image `sioj.png` as the Home page hero illustration (replacing the current hero illustration image) and apply a lightweight animation to it.",
+      "id": "REQ-23",
+      "text": "Add the new mascot image as a local static asset under frontend/public/assets/generated and reference it from the new mascot element using the same asset conventions as existing mascots.",
       "target": "frontend",
       "source": {
         "messageIds": [
-          "msg-5"
+          "msg-4"
         ],
         "quotes": [
-          "animate this image"
+          "add one more character animation to make it even more fun."
         ]
       },
       "acceptanceCriteria": [
-        "`sioj.png` is added as a static frontend asset (served from `frontend/public/...`) and is used as the Home page hero image in place of the current hero illustration.",
-        "The hero image has a visible, kid-friendly, lightweight animation (e.g., existing `animate-float` or `animate-bounce-gentle`) that does not harm readability/performance.",
-        "The image renders once (no duplicate rendering of the same hero image)."
-      ]
-    },
-    {
-      "id": "REQ-21",
-      "text": "Remove the extra image that appears layered on top of the main image in the UI (the overlay/duplicate image above the hero image).",
-      "target": "frontend",
-      "source": {
-        "messageIds": [
-          "msg-5"
-        ],
-        "quotes": [
-          "and on top of the omage there is another image delte it"
-        ]
-      },
-      "acceptanceCriteria": [
-        "On the affected page(s), there is no longer any unintended/extra image positioned on top of the main hero image.",
-        "The intended main image remains visible and properly aligned after removal.",
-        "No layout overlap or z-index stacking causes a second image to cover the main image."
+        "The new mascot image file exists in frontend/public/assets/generated with the exact filename specified in this build request.",
+        "The new mascot is loaded via a static /assets/generated/... path (no backend/image proxy).",
+        "No existing mascot assets (e.g., mascot-robotcat.dim_768x768.png, mascot-girl.dim_768x768.png) are removed or broken."
       ]
     }
   ],
   "constraints": [
-    "Do not modify files under `frontend/src/components/ui` (shadcn components are read-only).",
-    "Do not modify any immutable paths listed in SYSTEM_CONTEXT (compose around them instead)."
+    "Do not edit files under frontend/src/components/ui (read-only).",
+    "Do not introduce copyrighted characters (e.g., Dora, Doraemon); use an original mascot design.",
+    "Keep the backend architecture unchanged (single Motoko actor); no backend changes are required for this request."
   ],
   "nonGoals": [
-    "No backend (Motoko) changes.",
-    "No new learning modules or content expansion beyond the requested theme + image fixes."
+    "Do not redesign site navigation or add new learning modules.",
+    "Do not change the existing gender theme behavior beyond what is necessary to ensure the new mascot respects the current styling and reduced-motion preferences."
   ],
   "imageRequirements": {
-    "required": [],
+    "required": [
+      "Original cartoon mascot character illustration (mascot-rocketfox.dim_768x768.png)"
+    ],
     "edits": []
   },
   "userProfileUpdate": {

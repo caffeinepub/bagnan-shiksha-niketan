@@ -1,11 +1,11 @@
 # Specification
 
 ## Summary
-**Goal:** Make the Baby Girl/Baby Boy selection correctly switch and persist site-wide theme colors, and update the Home hero to use the provided illustration with a lightweight animation while removing any duplicate/overlay hero image.
+**Goal:** Add one additional animated, original cartoon-style mascot on the Mathematics page to make the site feel more fun without affecting usability.
 
 **Planned changes:**
-- Fix Baby Girl/Baby Boy theme switching so it updates the full UI color palette across pages (background, text, cards, buttons, gradients) and persists across navigation and refresh, while staying compatible with Tailwind `hsl(var(--...))` bindings.
-- Replace the current Home hero illustration with `sioj.png` served from `frontend/public/...` and apply a kid-friendly lightweight animation to the hero image.
-- Remove the unintended extra/overlay hero image so only the intended hero image renders and no layering/z-index overlap remains.
+- Add a new mascot image asset under `frontend/public/assets/generated` named `mascot-rocketfox.dim_768x768.png`.
+- Update `frontend/src/pages/MathematicsPage.tsx` to render the new mascot as a decorative element with a lightweight animation that respects reduced-motion preferences.
+- Ensure the mascot is non-interactive (`pointer-events-none`), marked decorative for assistive tech, and positioned responsively so it won’t overlap important UI (hidden or placed safely on small screens).
 
-**User-visible outcome:** Selecting “Baby Girl” or “Baby Boy” immediately changes the site colors everywhere and stays selected after refresh; the Home page shows the new hero illustration with a subtle animation and no duplicate image overlay.
+**User-visible outcome:** The Mathematics page shows an extra fun animated mascot that decorates the page without blocking any interactions.

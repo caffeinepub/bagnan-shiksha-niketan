@@ -2,12 +2,10 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-fix-the-baby-girl-baby-boy-theme-so-selecting-a-gender-actually-changes-the-site-colors-across-pages-background-text-cards-buttons-gradients-and-persists-after-refresh-navigation",
-      "featureTitle": "Fix the Baby Girl/Baby Boy theme so selecting a gender actually changes the site colors across pages (background, text, cards, buttons, gradients) and persists after refresh/navigation.",
+      "featureId": "feature-add-one-additional-moving-cartoon-style-mascot-element-original-non-copyrighted-with-a-lightweight-animation-to-make-the-site-feel-more-fun-and-render-it-on-the-mathematics-page-without-interfering-with-content-interaction-decorative-only",
+      "featureTitle": "Add one additional moving cartoon-style mascot element (original, non-copyrighted) with a lightweight animation to make the site feel more fun, and render it on the Mathematics page without interfering with content interaction (decorative only).",
       "files": [
-        "frontend/src/components/site/GenderSelector.tsx",
-        "frontend/src/index.css",
-        "frontend/src/theme/GenderThemeContext.tsx"
+        "frontend/src/pages/MathematicsPage.tsx"
       ],
       "components": [
         "authorization@4.0.0",
@@ -18,15 +16,15 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-19"
+        "REQ-22"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-integrate-the-uploaded-image-sioj-png-as-the-home-page-hero-illustration-replacing-the-current-hero-illustration-image-and-apply-a-lightweight-animation-to-it",
-      "featureTitle": "Integrate the uploaded image `sioj.png` as the Home page hero illustration (replacing the current hero illustration image) and apply a lightweight animation to it.",
+      "featureId": "feature-add-the-new-mascot-image-as-a-local-static-asset-under-frontend-public-assets-generated-and-reference-it-from-the-new-mascot-element-using-the-same-asset-conventions-as-existing-mascots",
+      "featureTitle": "Add the new mascot image as a local static asset under frontend/public/assets/generated and reference it from the new mascot element using the same asset conventions as existing mascots.",
       "files": [
-        "frontend/src/pages/HomePage.tsx"
+        "frontend/src/pages/MathematicsPage.tsx"
       ],
       "components": [
         "authorization@4.0.0",
@@ -37,26 +35,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-20"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-remove-the-extra-image-that-appears-layered-on-top-of-the-main-image-in-the-ui-the-overlay-duplicate-image-above-the-hero-image",
-      "featureTitle": "Remove the extra image that appears layered on top of the main image in the UI (the overlay/duplicate image above the hero image).",
-      "files": [
-        "frontend/src/pages/HomePage.tsx"
-      ],
-      "components": [
-        "authorization@4.0.0",
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-21"
+        "REQ-23"
       ],
       "confidence": "high"
     }

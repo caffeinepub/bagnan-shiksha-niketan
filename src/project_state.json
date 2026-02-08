@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 7,
+  "projectStateVersion": 9,
   "summary": "Expand the kid-friendly educational website to include richer learning content (more rhymes and math question banks), early-learning alphabet/number tracing & handwriting practice, additional animations, and an optional gender-based visual theme (girl/boy color styling) with engaging moving cartoon-style characters to improve kids’ appeal.",
   "architectural_notes": [
     "If adding cartoon characters/mascots, use original or properly licensed assets (avoid copyrighted characters like Doraemon/Dora unless licensed)."
@@ -10,7 +10,8 @@
     "An extra/duplicate image is appearing layered on top of the intended image (needs removal).",
     "Requested: animate the specified image/mascot element (current animation not present or not working as expected)."
   ],
-  "isFixRequest": true,
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Original cartoon mascot character illustration (mascot-rocketfox.dim_768x768.png)",
   "existing_features": [
     {
       "id": "feature-create-a-cohesive-fun-kid-friendly-visual-theme-for-the-entire-website-colors-typography-spacing-illustration-style-animation-style-that-feels-top-notch-and-appeals-to-parents-and-young-children-apply-it-consistently-across-all-pages-and-components",
@@ -171,6 +172,22 @@
         "REQ-21"
       ],
       "version": 1
+    },
+    {
+      "id": "feature-add-one-additional-moving-cartoon-style-mascot-element-original-non-copyrighted-with-a-lightweight-animation-to-make-the-site-feel-more-fun-and-render-it-on-the-mathematics-page-without-interfering-with-content-interaction-decorative-only",
+      "title": "Add one additional moving cartoon-style mascot element (original, non-copyrighted) with a lightweight animation to make the site feel more fun, and render it on the Mathematics page without interfering with content interaction (decorative only).",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-the-new-mascot-image-as-a-local-static-asset-under-frontend-public-assets-generated-and-reference-it-from-the-new-mascot-element-using-the-same-asset-conventions-as-existing-mascots",
+      "title": "Add the new mascot image as a local static asset under frontend/public/assets/generated and reference it from the new mascot element using the same asset conventions as existing mascots.",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
     }
   ],
   "new_feature_requests": [
@@ -263,6 +280,12 @@
     {
       "id": "AR-24",
       "summary": "Add moving cartoon-style character animations/mascots on the site to make it more attractive for kids",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-25",
+      "summary": "Add one additional moving cartoon-style character animation/mascot element to increase kid engagement",
       "reqIds": [],
       "status": "pending"
     }
